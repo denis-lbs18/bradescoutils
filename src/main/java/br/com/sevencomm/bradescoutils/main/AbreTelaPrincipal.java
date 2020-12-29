@@ -12,5 +12,4 @@ public class AbreTelaPrincipal {
 		TelaDeLogin telaDeLogin = new TelaDeLogin(WebDriverUtils.instanciaChromeDriver());
 		telaDeLogin.realizaLogin(usuario);
 	}
-
 }
