@@ -1,4 +1,4 @@
-package br.com.sevencomm.bradescoutils.pageobjects.agrupamento;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects.agrupamento;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -93,6 +93,13 @@ public class TelaManutencaoIndividualDeHierarquiaDeEmpresa extends TelaBase {
 			String diaInicio, String diaFim) {
 		this.insereTextoInputCodigoSequenciaEmpresaSubordinada(textoCodigoEmpresaSubordinada);
 		this.clicaBotaoCodigoSequenciaEmpresaSubordinada();
+		this.selecionaTipoHierarquia(tipoHierarquia);
+
+		this.selecionaDiaDataInicioVigencia(diaInicio);
+		this.selecionaDiaDataFimVigencia(diaFim);
+	}
+
+	public void preencheDadosConsulta(TipoHierarquia tipoHierarquia, String diaInicio, String diaFim) {
 		this.selecionaTipoHierarquia(tipoHierarquia);
 
 		this.selecionaDiaDataInicioVigencia(diaInicio);

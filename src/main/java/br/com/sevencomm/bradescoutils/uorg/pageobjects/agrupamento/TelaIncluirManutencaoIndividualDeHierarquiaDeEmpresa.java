@@ -1,4 +1,4 @@
-package br.com.sevencomm.bradescoutils.pageobjects.agrupamento;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects.agrupamento;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

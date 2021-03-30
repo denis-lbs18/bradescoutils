@@ -1,11 +1,11 @@
-package br.com.sevencomm.bradescoutils.main;
+package br.com.sevencomm.bradescoutils.uorg.main;
 
 import br.com.denisluna.selenium_utils.modelos.Usuario;
 import br.com.denisluna.selenium_utils.utils.selenium.WebDriverUtils;
 import br.com.sevencomm.bradescoutils.enums.TipoHierarquia;
-import br.com.sevencomm.bradescoutils.pageobjects.TelaDeLogin;
-import br.com.sevencomm.bradescoutils.pageobjects.duplavalidacao.TelaDuplaValidacaoHierarquiaEmpresa;
-import br.com.sevencomm.bradescoutils.pageobjects.menus.TelaMenuPrincipal;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.TelaDeLogin;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.duplavalidacao.TelaDuplaValidacaoHierarquiaEmpresa;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.menus.TelaMenuPrincipal;
 import br.com.sevencomm.bradescoutils.utils.UsuarioUtils;
 
 public class AbreTelaDuplaValidacaoHierarquia {

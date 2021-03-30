@@ -21,18 +21,35 @@ public final class GeradorMassaDeDadosUtils {
 				codigoEmpresaSubordinada, cnpjEmpresaSuperior, codigoEmpresaSuperior);
 	}
 
-	public static final MassaDeDadosManutencaoIndividualUnidade geraMassaDeDadosManutencaoIndividualUnidade() {
+	public static final MassaDeDadosManutencaoIndividualUnidade geraMassaDeDadosManutencaoIndividualUnidadeIncluir() {
 		RandomEnum<TipoHierarquiaUnidade> randomTipoHierarquia = new RandomEnum<TipoHierarquiaUnidade>(
 				TipoHierarquiaUnidade.class);
 		TipoHierarquiaUnidade tipoHierarquia = randomTipoHierarquia.random();
-		String tipoUnidadeSubordinada = PropertiesUtils.getVariable("massa.dados.codigotipounidade.subordinada");
+
 		String cnpjEmpresaSubordinada = PropertiesUtils.getVariable("massa.dados.cnpj.subordinada");
-		String codigoEmpresaSubordinada = PropertiesUtils.getVariable("massa.dados.codigosequencia.subordinada");
-		String cnpjEmpresaSuperior = PropertiesUtils.getVariable("massa.dados.cnpj.superior");
-		String codigoEmpresaSuperior = PropertiesUtils.getVariable("massa.dados.codigosequencia.superior");
+		String tipoUnidadeSubordinada = PropertiesUtils.getVariable("massa.dados.tipoDeUnidade.subordinada");
+		String tipoCodigoEmpresaSubordinada = PropertiesUtils.getVariable("massa.dados.tipoDeCodigo.subordinada");
+		String codigoSubordinada = PropertiesUtils.getVariable("massa.dados.codigo.subordinada");
+
+		String cnpjEmpresaSuperior = PropertiesUtils.getVariable("massa.dados.cnpj.subordinada");
+		String tipoUnidadeSuperior = PropertiesUtils.getVariable("massa.dados.tipoDeUnidade.superior");
+		String tipoCodigoEmpresaSuperior = PropertiesUtils.getVariable("massa.dados.tipoDeCodigo.superior");
+		String codigoSuperior = PropertiesUtils.getVariable("massa.dados.codigo.superior");
 		;
 
-		return new MassaDeDadosManutencaoIndividualUnidade(tipoHierarquia, tipoUnidadeSubordinada,
-				cnpjEmpresaSubordinada, codigoEmpresaSubordinada, cnpjEmpresaSuperior, codigoEmpresaSuperior);
+		return new MassaDeDadosManutencaoIndividualUnidade(tipoHierarquia, cnpjEmpresaSubordinada,
+				tipoUnidadeSubordinada, tipoCodigoEmpresaSubordinada, codigoSubordinada, cnpjEmpresaSuperior,
+				tipoUnidadeSuperior, tipoCodigoEmpresaSuperior, codigoSuperior);
+	}
+
+	public static MassaDeDadosManutencaoIndividualUnidade geraMassaDeDadosManutencaoIndividualUnidadeConsulta() {
+		TipoHierarquiaUnidade tipoHierarquiaUnidade = TipoHierarquiaUnidade.CENTRALIZADA;
+		String cnpjEmpresaSubordinada = PropertiesUtils.getVariable("massa.dados.cnpj.subordinada");
+		String tipoUnidadeSubordinada = PropertiesUtils.getVariable("massa.dados.tipoDeUnidade.subordinada");
+		String tipoCodigoSubordinada = PropertiesUtils.getVariable("massa.dados.tipoDeCodigo.subordinada");
+		String codigo = PropertiesUtils.getVariable("massa.dados.codigo.subordinada");
+
+		return new MassaDeDadosManutencaoIndividualUnidade(tipoHierarquiaUnidade, cnpjEmpresaSubordinada,
+				tipoUnidadeSubordinada, tipoCodigoSubordinada, codigo);
 	}
 }

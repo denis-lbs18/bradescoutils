@@ -1,24 +1,43 @@
 package br.com.sevencomm.bradescoutils.modelos;
 
+import java.time.LocalDateTime;
+
 import br.com.sevencomm.bradescoutils.enums.TipoHierarquiaUnidade;
 
 public class MassaDeDadosManutencaoIndividualUnidade extends MassaDeDados {
 	private TipoHierarquiaUnidade tipoHierarquia;
-	private String tipoUnidade;
-	private String cnpjSequenciaEmpresaSubordinada;
-	private String codigoSequenciaEmpresaSubordinada;
-	private String cnpjSequenciaEmpresaSuperior;
-	private String codigoSequenciaEmpresaSuperior;
+	private LocalDateTime dataInicioVigencia;
+	private LocalDateTime dataFimVigencia;
+	private String cnpjEmpresaSubordinada;
+	private String tipoUnidadeSubordinada;
+	private String tipoCodigoSubordinada;
+	private String codigoSubordinada;
+	private String cnpjEmpresaSuperior;
+	private String tipoUnidadeSuperior;
+	private String tipoCodigoSuperior;
+	private String codigoSuperior;
 
-	public MassaDeDadosManutencaoIndividualUnidade(TipoHierarquiaUnidade tipoHierarquia, String tipoUnidade,
-			String cnpjSequenciaEmpresaSubordinada, String codigoSequenciaEmpresaSubordinada,
-			String cnpjSequenciaEmpresaSuperior, String codigoSequenciaEmpresaSuperior) {
+	public MassaDeDadosManutencaoIndividualUnidade(TipoHierarquiaUnidade tipoHierarquia, String cnpjEmpresaSubordinada,
+			String tipoUnidadeSubordinada, String tipoCodigoSubordinada, String codigoSubordinada,
+			String cnpjEmpresaSuperior, String tipoUnidadeSuperior, String tipoCodigoSuperior, String codigoSuperior) {
 		this.tipoHierarquia = tipoHierarquia;
-		this.tipoUnidade = tipoUnidade;
-		this.cnpjSequenciaEmpresaSubordinada = cnpjSequenciaEmpresaSubordinada;
-		this.codigoSequenciaEmpresaSubordinada = codigoSequenciaEmpresaSubordinada;
-		this.cnpjSequenciaEmpresaSuperior = cnpjSequenciaEmpresaSuperior;
-		this.codigoSequenciaEmpresaSuperior = codigoSequenciaEmpresaSuperior;
+		this.cnpjEmpresaSubordinada = cnpjEmpresaSubordinada;
+		this.tipoUnidadeSubordinada = tipoUnidadeSubordinada;
+		this.tipoCodigoSubordinada = tipoCodigoSubordinada;
+		this.codigoSubordinada = codigoSubordinada;
+		this.cnpjEmpresaSuperior = cnpjEmpresaSuperior;
+		this.tipoUnidadeSuperior = tipoUnidadeSuperior;
+		this.tipoCodigoSuperior = tipoCodigoSuperior;
+		this.codigoSuperior = codigoSuperior;
+	}
+
+	public MassaDeDadosManutencaoIndividualUnidade(TipoHierarquiaUnidade tipoHierarquia, String cnpjEmpresaSubordinada,
+			String tipoUnidadeSubordinada, String tipoCodigoSubordinada, String codigoSubordinada) {
+		this.tipoHierarquia = tipoHierarquia;
+		this.cnpjEmpresaSubordinada = cnpjEmpresaSubordinada;
+		this.tipoUnidadeSubordinada = tipoUnidadeSubordinada;
+		this.tipoCodigoSubordinada = tipoCodigoSubordinada;
+		this.codigoSubordinada = codigoSubordinada;
 	}
 
 	public TipoHierarquiaUnidade getTipoHierarquia() {
@@ -29,44 +48,84 @@ public class MassaDeDadosManutencaoIndividualUnidade extends MassaDeDados {
 		this.tipoHierarquia = tipoHierarquia;
 	}
 
-	public String getTipoUnidade() {
-		return tipoUnidade;
+	public LocalDateTime getDataInicioVigencia() {
+		return dataInicioVigencia;
 	}
 
-	public void setTipoUnidade(String tipoUnidade) {
-		this.tipoUnidade = tipoUnidade;
+	public void setDataInicioVigencia(LocalDateTime dataInicioVigencia) {
+		this.dataInicioVigencia = dataInicioVigencia;
 	}
 
-	public String getCnpjSequenciaEmpresaSubordinada() {
-		return cnpjSequenciaEmpresaSubordinada;
+	public LocalDateTime getDataFimVigencia() {
+		return dataFimVigencia;
 	}
 
-	public void setCnpjSequenciaEmpresaSubordinada(String cnpjSequenciaEmpresaSubordinada) {
-		this.cnpjSequenciaEmpresaSubordinada = cnpjSequenciaEmpresaSubordinada;
+	public void setDataFimVigencia(LocalDateTime dataFimVigencia) {
+		this.dataFimVigencia = dataFimVigencia;
 	}
 
-	public String getCodigoSequenciaEmpresaSubordinada() {
-		return codigoSequenciaEmpresaSubordinada;
+	public String getCnpjEmpresaSubordinada() {
+		return cnpjEmpresaSubordinada;
 	}
 
-	public void setCodigoSequenciaEmpresaSubordinada(String codigoSequenciaEmpresaSubordinada) {
-		this.codigoSequenciaEmpresaSubordinada = codigoSequenciaEmpresaSubordinada;
+	public void setCnpjEmpresaSubordinada(String cnpjEmpresaSubordinada) {
+		this.cnpjEmpresaSubordinada = cnpjEmpresaSubordinada;
 	}
 
-	public String getCnpjSequenciaEmpresaSuperior() {
-		return cnpjSequenciaEmpresaSuperior;
+	public String getTipoUnidadeSubordinada() {
+		return tipoUnidadeSubordinada;
 	}
 
-	public void setCnpjSequenciaEmpresaSuperior(String cnpjSequenciaEmpresaSuperior) {
-		this.cnpjSequenciaEmpresaSuperior = cnpjSequenciaEmpresaSuperior;
+	public void setTipoUnidadeSubordinada(String tipoUnidadeSubordinada) {
+		this.tipoUnidadeSubordinada = tipoUnidadeSubordinada;
 	}
 
-	public String getCodigoSequenciaEmpresaSuperior() {
-		return codigoSequenciaEmpresaSuperior;
+	public String getTipoCodigoSubordinada() {
+		return tipoCodigoSubordinada;
 	}
 
-	public void setCodigoSequenciaEmpresaSuperior(String codigoSequenciaEmpresaSuperior) {
-		this.codigoSequenciaEmpresaSuperior = codigoSequenciaEmpresaSuperior;
+	public void setTipoCodigoSubordinada(String tipoCodigoSubordinada) {
+		this.tipoCodigoSubordinada = tipoCodigoSubordinada;
+	}
+
+	public String getCodigoSubordinada() {
+		return codigoSubordinada;
+	}
+
+	public void setCodigoSubordinada(String codigoSubordinada) {
+		this.codigoSubordinada = codigoSubordinada;
+	}
+
+	public String getCnpjEmpresaSuperior() {
+		return cnpjEmpresaSuperior;
+	}
+
+	public void setCnpjEmpresaSuperior(String cnpjEmpresaSuperior) {
+		this.cnpjEmpresaSuperior = cnpjEmpresaSuperior;
+	}
+
+	public String getTipoUnidadeSuperior() {
+		return tipoUnidadeSuperior;
+	}
+
+	public void setTipoUnidadeSuperior(String tipoUnidadeSuperior) {
+		this.tipoUnidadeSuperior = tipoUnidadeSuperior;
+	}
+
+	public String getTipoCodigoSuperior() {
+		return tipoCodigoSuperior;
+	}
+
+	public void setTipoCodigoSuperior(String tipoCodigoSuperior) {
+		this.tipoCodigoSuperior = tipoCodigoSuperior;
+	}
+
+	public String getCodigoSuperior() {
+		return codigoSuperior;
+	}
+
+	public void setCodigoSuperior(String codigoSuperior) {
+		this.codigoSuperior = codigoSuperior;
 	}
 
 }

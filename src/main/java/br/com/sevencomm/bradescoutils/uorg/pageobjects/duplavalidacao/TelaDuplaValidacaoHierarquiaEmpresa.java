@@ -1,4 +1,4 @@
-package br.com.sevencomm.bradescoutils.pageobjects.duplavalidacao;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects.duplavalidacao;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import br.com.denisluna.selenium_utils.modelos.TelaBase;
 import br.com.denisluna.selenium_utils.utils.constants.TempoTimeouts;
 import br.com.denisluna.selenium_utils.utils.selenium.ByUtils;
 import br.com.sevencomm.bradescoutils.enums.TipoHierarquia;
-import br.com.sevencomm.bradescoutils.pageobjects.agrupamento.TelaConsultarManutencaoIndividualDeHierarquiaDeEmpresa;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.agrupamento.TelaConsultarManutencaoIndividualDeHierarquiaDeEmpresa;
 import br.com.sevencomm.bradescoutils.utils.PropertiesUtils;
 
 public class TelaDuplaValidacaoHierarquiaEmpresa extends TelaBase {

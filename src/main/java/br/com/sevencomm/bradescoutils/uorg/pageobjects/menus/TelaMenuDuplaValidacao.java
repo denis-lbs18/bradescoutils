@@ -1,11 +1,11 @@
-package br.com.sevencomm.bradescoutils.pageobjects.menus;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects.menus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import br.com.denisluna.selenium_utils.modelos.TelaBase;
 import br.com.denisluna.selenium_utils.utils.selenium.ByUtils;
-import br.com.sevencomm.bradescoutils.pageobjects.duplavalidacao.TelaDuplaValidacaoHierarquiaEmpresa;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.duplavalidacao.TelaDuplaValidacaoHierarquiaEmpresa;
 import br.com.sevencomm.bradescoutils.utils.PropertiesUtils;
 
 public class TelaMenuDuplaValidacao extends TelaBase {

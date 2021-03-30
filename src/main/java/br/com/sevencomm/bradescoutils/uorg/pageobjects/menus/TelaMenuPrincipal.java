@@ -1,7 +1,8 @@
-package br.com.sevencomm.bradescoutils.pageobjects.menus;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects.menus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import br.com.denisluna.selenium_utils.modelos.TelaBase;
 import br.com.denisluna.selenium_utils.utils.selenium.ByUtils;
@@ -18,6 +19,9 @@ public class TelaMenuPrincipal extends TelaBase {
 	}
 
 	public TelaMenuAgrupamentos clicaMenuAgrupamentos() {
+		WebElement element = getDriver().findElement(menuAgrupamentos);
+		System.out.println(element.getLocation());
+
 		this.getElemento().elementoWebClica(this.menuAgrupamentos);
 		return new TelaMenuAgrupamentos(this.getDriver());
 	}

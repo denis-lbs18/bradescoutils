@@ -1,4 +1,4 @@
-package br.com.sevencomm.bradescoutils.pageobjects;
+package br.com.sevencomm.bradescoutils.uorg.pageobjects;
 
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import br.com.denisluna.selenium_utils.modelos.TelaBase;
 import br.com.denisluna.selenium_utils.modelos.Usuario;
 import br.com.denisluna.selenium_utils.utils.constants.TempoTimeouts;
-import br.com.sevencomm.bradescoutils.pageobjects.menus.TelaMenuPrincipal;
+import br.com.sevencomm.bradescoutils.uorg.pageobjects.menus.TelaMenuPrincipal;
 import br.com.sevencomm.bradescoutils.utils.PropertiesUtils;
 
 public class TelaDeLogin extends TelaBase {
